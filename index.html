@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TAIF THROUGH TIME</title>
+<style>
+:root {
+  --pink: #d99aaf;
+  --dark-pink: #8d526b;
+  --beige: #f8eee3;
+  --cream: #fffaf6;
+  --text: #4b3540;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: Arial, Tahoma, sans-serif;
+  background: var(--beige);
+  color: var(--text);
+  line-height: 1.8;
+}
+header {
+  min-height: 80vh;
+  padding: 25px 7%;
+  color: white;
+  background:
+    linear-gradient(120deg, #63374fe8, #b77b91a8),
+    url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1600&q=80")
+    center/cover;
+  display: flex;
+  flex-direction: column;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.logo span {
+  color: #f4d6c9;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 5px 10px;
+}
+.intro {
+  max-width: 700px;
+  margin: auto 0;
+  padding: 70px 0;
+}
+.eyebrow {
+  color: #f3d0d8;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+h1 {
+  font-size: clamp(42px, 8vw, 76px);
+  line-height: 1.2;
+  margin: 15px 0;
+}
+.intro p {
+  font-size: 18px;
+  color: #fff4f1;
+}
+.btn {
+  display: inline-block;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 23px;
+  background: var(--pink);
+  color: #402638;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 8px 0;
+}
+.btn-outline {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  margin-right: 8px;
+}
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 55px 20px;
+}
+section {
+  margin-bottom: 55px;
+}
+h2 {
+  color: var(--dark-pink);
+  font-size: clamp(28px, 5vw, 42px);
+  margin: 8px 0;
+}
+.muted {
+  color: #806d75;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.card {
+  background: var(--cream);
+  border: 1px solid #ecd8d9;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px #70485b12;
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+.card-content {
+  padding: 20px;
+}
+.card h3 {
+  color: var(--dark-pink);
+  margin-top: 0;
+}
+.box {
+  background: var(--cream);
+  border: 1px solid #ecd8d9;
+  border-radius: 22px;
+  padding: clamp(20px, 5vw, 40px);
+}
+.upload {
+  background: #fff7f3;
+  border: 2px dashed #d8a9b9;
+  border-radius: 16px;
+  padding: 25px;
+  text-align: center;
+}
+input[type="file"] {
+  max-width: 100%;
+  margin: 15px 0;
+}
+.preview {
+  display: none;
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 15px;
+  margin: 18px auto;
+}
+.status {
+  background: #f7e8e7;
+  border-radius: 12px;
+  padding: 14px;
+  margin-top: 15px;
+  overflow-wrap: anywhere;
+}
+.bar {
+  height: 8px;
+  background: #ead9dd;
+  border-radius: 10px;
+  margin: 5px 0 14px;
+}
+.bar span {
+  display: block;
+  height: 100%;
+  background: var(--dark-pink);
+  border-radius: 10px;
+}
+.ar-section {
+  background: #8d526b;
+  color: white;
+  padding: clamp(22px, 5vw, 40px);
+  border-radius: 22px;
+}
+.ar-section h2 {
+  color: white;
+}
+.ar-section p {
+  color: #fff0f0;
+}
+footer {
+  background: #63374f;
+  color: #fff0f0;
+  text-align: center;
+  padding: 25px;
+}
+@media (max-width: 700px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .card img {
+    height: 220px;
+  }
+  header {
+    min-height: 70vh;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+  <nav>
+    <div class="logo">TAIF <span>THROUGH TIME</span></div>
+    <div>
+      <a href="#discover">اكتشف</a>
+      <a href="#vision">الرؤية الحاسوبية</a>
+      <a href="#ar">الواقع المعزز</a>
+    </div>
+  </nav>
+  <div class="intro">
+    <div class="eyebrow">SMART TOURISM · CV · AR</div>
+    <h1>الطائف،<br>اكتشفها بطريقة مختلفة.</h1>
+    <p>
+      رحلة تفاعلية تجمع جمال الطائف مع تقنيات الذكاء الاصطناعي
+      والواقع المعزز. اكتشف الأماكن وجرّب تحليل الصور بنفسك.
+    </p>
+    <a class="btn" href="#discover">ابدأ الاستكشاف</a>
+    <a class="btn btn-outline" href="#vision">جرّب تحليل الصور</a>
+  </div>
+</header>
+<main>
+<section id="discover">
+  <div class="eyebrow">THE CITY OF ROSES</div>
+  <h2>محطات من الطائف</h2>
+  <p class="muted">
+    من المرتفعات الخضراء إلى الورد الطائفي،
+    لكل مكان حكاية تستحق الاكتشاف.
+  </p>
+  <div class="cards">
+    <article class="card">
+      <img
+        src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80"
+        alt="منظر جبلي">
+      <div class="card-content">
+        <h3>مرتفعات الهدا</h3>
+        <p class="muted">إطلالات جبلية وطبيعة جميلة وهواء عليل.</p>
+      </div>
+    </article>
+    <article class="card">
+      <img
+        src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=800&q=80"
+        alt="زهور وردية">
+      <div class="card-content">
+        <h3>الورد الطائفي</h3>
+        <p class="muted">رمز من رموز الطائف وعطر ارتبط بذاكرتها.</p>
+      </div>
+    </article>
+    <article class="card">
+      <img
+        src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=800&q=80"
+        alt="مبان معمارية">
+      <div class="card-content">
+        <h3>روح المكان</h3>
+        <p class="muted">اكتشف تفاصيل المدينة وتنوع تجاربها.</p>
+      </div>
+    </article>
+  </div>
+</section>
+<section id="vision" class="box">
+  <div class="eyebrow">COMPUTER VISION</div>
+  <h2>خلّ الذكاء الاصطناعي يحلل صورتك</h2>
+  <p class="muted">
+    اختَر صورة وسيحاول نموذج الرؤية الحاسوبية التعرف على الأشياء
+    الظاهرة فيها. النموذج عام وليس مدربًا خصيصًا لمعالم الطائف.
+  </p>
+  <div class="upload">
+    <label for="photo"><strong>اختَر صورة من جهازك</strong></label>
+    <br>
+    <input id="photo" type="file" accept="image/*">
+    <br>
+    <button class="btn" id="analyze" disabled>حلّل الصورة</button>
+    <img id="preview" class="preview" alt="معاينة الصورة">
+    <div id="status" class="status">
+      حمّل صورة للبدء. يحتاج تحليل الصور إلى اتصال بالإنترنت.
+    </div>
+    <div id="results"></div>
+  </div>
+</section>
+<section id="ar" class="ar-section">
+  <div class="eyebrow">AUGMENTED REALITY</div>
+  <h2>اكتشف الواقع المعزز</h2>
+  <p>
+    جرّب تقنية الواقع المعزز التي تتيح عرض عناصر رقمية
+    فوق صورة حقيقية باستخدام كاميرا الجهاز.
+  </p>
+  <a class="btn"
+     href="https://ar-js-org.github.io/AR.js/three.js/examples/marker-training/examples/generator.html"
+     target="_blank"
+     rel="noopener">
+     افتح أداة علامة الواقع المعزز
+  </a>
+  <p style="font-size:14px">
+    هذه الأداة خارج الموقع؛ تجربة الواقع المعزز ليست مدمجة بالكامل في هذه الصفحة.
+  </p>
+</section>
+</main>
+<footer>
+  TAIF THROUGH TIME · تجربة سياحية تفاعلية
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.20.0/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.1.1"></script>
+<script>
+const photo = document.getElementById("photo");
+const preview = document.getElementById("preview");
+const button = document.getElementById("analyze");
+const statusBox = document.getElementById("status");
+const results = document.getElementById("results");
+let model = null;
+let imageReady = false;
+photo.addEventListener("change", () => {
+  const file = photo.files[0];
+  results.innerHTML = "";
+  if (!file) return;
+  if (!file.type.startsWith("image/")) {
+    statusBox.textContent = "اختَر ملف صورة من فضلك.";
+    return;
+  }
+  preview.src = URL.createObjectURL(file);
+  preview.style.display = "block";
+  preview.onload = () => {
+    imageReady = true;
+    button.disabled = false;
+    statusBox.textContent = "الصورة جاهزة للتحليل.";
+  };
+});
+button.addEventListener("click", async () => {
+  if (!imageReady) return;
+  button.disabled = true;
+  statusBox.textContent = "جارٍ تحميل نموذج الرؤية الحاسوبية...";
+  try {
+    if (!model) {
+      model = await mobilenet.load();
+    }
+    statusBox.textContent = "جارٍ تحليل الصورة...";
+    const predictions = await model.classify(preview, 5);
+    statusBox.textContent =
+      "انتهى التحليل. هذه توقعات النموذج وليست نتائج مؤكدة:";
+    results.innerHTML =
+      "<ol>" +
+      predictions.map(item => {
+        const percent = Math.round(item.probability * 100);
+        return `
+          <li>
+            <strong>${item.className}</strong> — ${percent}%
+            <div class="bar">
+              <span style="width:${percent}%"></span>
+            </div>
+          </li>
+        `;
+      }).join("") +
+      "</ol>";
+  } catch (error) {
+    statusBox.textContent =
+      "تعذّر تحميل النموذج. تأكد من اتصال الإنترنت ثم حاول مرة أخرى.";
+  }
+  button.disabled = false;
+});
+</script>
+</body>
+</html>
